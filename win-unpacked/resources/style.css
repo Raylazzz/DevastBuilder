@@ -1,0 +1,289 @@
+html,
+body {
+    width: 100%;
+    user-select: none;
+    background-color: #344d59;
+    overflow: hidden;
+}
+
+div#blur {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(5px);
+}
+
+div#models {
+    height: 80%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    align-content: baseline;
+    width: calc(100% - 20px);
+    border: 1px grey solid;
+}
+
+div#select,
+div#create {
+    z-index: 2;
+    width: 70%;
+    height: 80%;
+    padding: 30px;
+    position: absolute;
+    border-radius: 20px;
+    background: #137c8b;
+    box-sizing: border-box;
+    top: calc(50% - 80% / 2);
+    left: calc(50% - 70% / 2);
+    box-shadow: 0 0 0 4px black;
+}
+
+div#create {
+    display: none;
+    flex-direction: column;
+}
+
+#container1 {
+    height: calc(100% - 2 * 48px);
+}
+
+ol {
+    height: calc(100% - 114px);
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    outline-color: cyan;
+}
+
+#preview {
+    margin: 10px 0 0 0;
+    max-width: 100%;
+    max-height: calc(100% - 53px);
+    width: auto;
+    height: auto;
+    border: grey 1px solid;
+}
+
+u {
+    float: right;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button {
+    border: 0;
+    margin: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    width: fit-content;
+    font-family: Arial;
+    padding-block: 10px;
+    border-radius: 20px;
+    padding-inline: 40px;
+    background: #709ca7;
+    transition: all 0.5s ease;
+    box-shadow: black 0px 0px 0px 4px;
+}
+
+.delete-icon {
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    filter: invert(1);
+    position: absolute;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #0000004f;
+    transition: all 0.3s ease;
+    border: 1px #000000 solid;
+}
+
+.delete-icon:hover {
+    scale: 1.05;
+}
+
+button:hover {
+    box-shadow: #709ca7 0px 0px 0px 4px;
+}
+
+input[type="checkbox"].switch_1 {
+    width: 3.5em;
+    outline: none;
+    height: 1.5em;
+    font-size: 15px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    border-radius: 3em;
+    background: #000000;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+input[type="checkbox"].switch_1:checked {
+    background: #137c8b;
+}
+
+input[type="checkbox"].switch_1:after {
+    left: 0;
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"].switch_1:checked:after {
+    left: calc(100% - 1.5em);
+}
+
+html,
+body,
+.container {
+    margin: 0;
+    height: 100%;
+}
+
+#controlBar {
+    width: 100%;
+    display: flex;
+    height: calc(10% - 4px);
+    border-bottom: 4px black solid;
+}
+
+/* .side-option {
+    
+} */
+
+#controlBar div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2e35;
+}
+
+#largerContainer {
+    height: 90%;
+    display: flex;
+}
+
+div.flexContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+div#container2 {
+    width: min(calc(100% - 5%), calc(100% - 40px));
+    height: 100%;
+}
+
+#sideBar {
+    width: max(5%, 70px);
+    background-color: #1f2e35;
+    height: 100%;
+    border-right: 4px black solid;
+}
+
+.side-option {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.side-option:hover {
+    scale: 1.05;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    align-content: baseline;
+}
+
+.widget {
+    margin: 10px;
+    flex-grow: 1;
+    display: flex;
+    padding: 10px;
+    max-width: 170px;
+    width: fit-content;
+    position: relative;
+    border-radius: 20px;
+    height: fit-content;
+    align-items: center;
+    background: #709ca7;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease;
+    box-shadow: black 0px 0px 0px 4px;
+}
+
+spinner {
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-left: 20px;
+    border-radius: 40px;
+    border: 2px solid #ffffff;
+    border-bottom-color: transparent;
+    animation: rotation 1s linear infinite;
+}
+
+.widget:hover {
+    box-shadow: #709ca7 0px 0px 0px 4px;
+}
+
+img {
+    margin: 10px;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.line {
+    display: flex;
+}
+
+h3,
+h5 {
+    margin-block: 5px;
+}
+
+h3,
+h5,
+ol {
+    color: white;
+    font-family: Arial;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

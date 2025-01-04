@@ -1,0 +1,33 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.yourapp.id
+icon: ./icon.png
+productName: Devast builder
+extraResources:
+  - from: assets
+    to: assets
+    filter:
+      - '**/*'
+  - from: models.json
+  - from: appBody.html
+  - from: style.css
+  - from: script.js
+  - from: delete-icon.png
+  - from: x2-icon.png
+  - from: x2-icon-hover.png
+  - from: back-icon.png
+  - from: back-icon-hover.png
+files:
+  - filter:
+      - main.js
+      - src/**/*
+mac:
+  category: public.app-category.utilities
+win:
+  target:
+    - nsis
+linux:
+  target:
+    - AppImage
+electronVersion: 33.2.1

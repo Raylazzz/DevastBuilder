@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>main</title>
+    </head>
+    <body>
+        <div id="blur">
+            <div id="select">
+                <h3>Sélectionnez votre modèle</h3>
+                <div id="models"></div>
+                <button onclick="valid()">Valider</button>
+                <u onclick="addModel()">Pas de modèle ? Ajoutez-en un !</u>
+            </div>
+            <div id="create">
+                <h3>Créez votre modèle en 3 étapes</h3>
+                <ol>
+                    <div id="container1">
+                        <li>
+                            <h5>Sélectionnez la miniature du modèle</h5>
+                            <div class="line">
+                                <input id="getImage" type="file" accept="image/png, image/jpeg" />
+                            </div>
+                        </li>
+                        <img src="" id="preview" />
+                    </div>
+                    <li>
+                        <h5>Donnez un nom à votre modèle</h5>
+                        <input id="getName" type="text" />
+                    </li>
+                    <li>
+                        <h5>Entrez les données du modèle</h5>
+                        <input id="getData" type="text" />
+                    </li>
+                </ol>
+                <div class="line">
+                    <button id="createModel">Valider</button>
+                    <button id="cancelModel">Annuler</button>
+                    <button id="importModel">Importer</button>
+                    <button id="exportModel">Exporter</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flexContainer">
+            <div id="sideBar"></div>
+            <div id="container2">
+                <div id="controlBar">
+                    <div>
+                        <h3>Blocs requis</h3>
+                    </div>
+                    <div>
+                        <h3 style="margin-right: 15px">Matériaux requis, boost x2:</h3>
+                    </div>
+                </div>
+                <div id="largerContainer">
+                    <div class="container" id="item"></div>
+                    <div class="container" id="mat"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
